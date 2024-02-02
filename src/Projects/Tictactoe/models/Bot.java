@@ -1,5 +1,7 @@
 package Projects.Tictactoe.models;
 
+import Projects.Tictactoe.Strategies.BotPLayingStrategy.BotPlayingStrategy;
+
 public class Bot extends Player{
 
         private BotDifficultyLevel botDifficultyLevel;
