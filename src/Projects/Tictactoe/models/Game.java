@@ -48,7 +48,7 @@ public class Game {
         return winner;
     }
 
-    public GameStatus getGamestate() {
+    public Projects.Tictactoe.models.GameStatus getGamestate() {
         return gamestate;
     }
 

@@ -1,9 +1,10 @@
-package Projects.Tictactoe.Controller;
+package src.Projects.Tictactoe.Controller;
 
-import Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
+//import Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
 import Projects.Tictactoe.models.Game;
 import Projects.Tictactoe.models.GameStatus;
 import Projects.Tictactoe.models.Player;
+import src.Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class GameController {
     }
 
     //why the below function is required?
-    // because the main cls(Client cls) should not directly call the methof printboard
+    // because the main cls(Client cls) should not directly call the method printboard
     //from Game class..
     // it should go thru controller, that why the below class created
     public void displayBoard(Game game)
@@ -36,6 +37,7 @@ public class GameController {
 
     public GameStatus getGameState(Game game)
     {
+
         return game.getGamestate();
     }
 
