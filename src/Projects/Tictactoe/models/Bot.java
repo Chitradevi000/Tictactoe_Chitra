@@ -24,8 +24,8 @@ public class Bot extends Player{
 
     public Move makeMove(Board board) //move of a bot
     {
-        Move move=botPlayingStrategy.makeMove(board); //move cell
-        move.setPlayer(this); //player's move
+        Move move=botPlayingStrategy.makeMove(this,board); //move cell
+        move.setPlayer(this); //bot's move
         return move;
 
     }

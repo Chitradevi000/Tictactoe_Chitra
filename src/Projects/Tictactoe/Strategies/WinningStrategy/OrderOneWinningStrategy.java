@@ -70,7 +70,7 @@ public class OrderOneWinningStrategy implements WinningStrategy {
 
 
     @Override
-    public Player checkwinner(Board board,Move lastMove) // we gonna get the player from Move
+    public Player checkWinner(Board board,Move lastMove) // we gonna get the player from Move
     {
         Player lastMovePlayer= lastMove.getPlayer(); // this line made for return lastMovePlayer
         char symbol=lastMove.getPlayer().getSymbol().getSymbolchar();
@@ -145,7 +145,7 @@ public class OrderOneWinningStrategy implements WinningStrategy {
         {
             if(!cornersSymbolCount.containsKey(symbol))
             {
-                colSymbolCount.put(symbol,0);
+                cornersSymbolCount.put(symbol,0);
             }
 
             cornersSymbolCount.put(symbol,

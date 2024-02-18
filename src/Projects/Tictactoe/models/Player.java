@@ -4,28 +4,24 @@ import java.security.PrivateKey;
 import java.util.Scanner;
 
 public class Player {
-    private Long id;
+    private static int idCounter= 0; //we are created this during the TicTacToeGame class
+    private int id;
     private String name;
     private Symbol symbol;
     private PlayerType playerType;
 
     private Scanner scanner;
 
-    public Player(Long id, String name, Symbol symbol, PlayerType playerType) {
-        this.id = id;
+    public Player(String name, Symbol symbol, PlayerType playerType) // we are not passing the id here as its auto incremeted
+    {
+        this.id=idCounter++;
         this.name = name;
         this.symbol = symbol;
         this.playerType = playerType;
         this.scanner = new Scanner(System.in);
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

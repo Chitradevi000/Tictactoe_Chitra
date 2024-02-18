@@ -1,6 +1,7 @@
 package Projects.Tictactoe.Controller;
 
 //import Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
+import Projects.Tictactoe.Strategies.WinningStrategy.OrderOneWinningStrategy;
 import Projects.Tictactoe.models.Game;
 import Projects.Tictactoe.models.GameStatus;
 import Projects.Tictactoe.models.Player;
@@ -10,14 +11,14 @@ import java.util.List;
 
 public class GameController {
 
-    public Game CreateGame(int dimension, List<Player> players, List<WinningStrategy> winningStrategies)
+    public Game CreateGame(int dimension, List<Player> players)
     {
         try {
             return Game
                     .builder() //below are the setters in builder class (inside Game class)
                     .setDimension(dimension)//stream
                     .setPlayers(players)
-                    .setWinningStrategies(winningStrategies)
+                    .setWinningStrategies(List.of(new OrderOneWinningStrategy(dimension)))//since we have one winning strategy , we are directly passing that
                     .build();
         } catch (Exception e) {
             System.out.println("Couldnt start game, something went wrong");
