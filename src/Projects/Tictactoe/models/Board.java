@@ -26,9 +26,7 @@ public class Board {
         }
 
     }
-
-
-    public void printBoard()
+   public void printBoard()
     {
         //go thru all cells and print it
 

@@ -1,4 +1,4 @@
-package src.Projects.Tictactoe.Strategies.WinningStrategy;
+package Projects.Tictactoe.Strategies.WinningStrategy;
 
 import Projects.Tictactoe.models.Board;
 import Projects.Tictactoe.models.Player;

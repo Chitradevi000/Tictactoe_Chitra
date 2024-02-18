@@ -1,4 +1,4 @@
-package src.Projects.Tictactoe.exception;
+package Projects.Tictactoe.exception;
 
 public class InvalidBotCountException extends RuntimeException{
     public InvalidBotCountException(String message)

@@ -1,10 +1,10 @@
-package src.Projects.Tictactoe.Controller;
+package Projects.Tictactoe.Controller;
 
 //import Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
 import Projects.Tictactoe.models.Game;
 import Projects.Tictactoe.models.GameStatus;
 import Projects.Tictactoe.models.Player;
-import src.Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
+import Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
 
 import java.util.List;
 
