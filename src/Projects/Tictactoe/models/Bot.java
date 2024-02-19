@@ -15,8 +15,8 @@ public class Bot extends Player{
     //constructor created with this class attri,
     //this is for player type bot changed in super constructor attri
 
-    public Bot(Long id, String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel botDifficultyLevel, BotPlayingStrategy botPlayingStrategy) {
-        super(id, name, symbol, PlayerType.BOT);
+    public Bot(String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel botDifficultyLevel, BotPlayingStrategy botPlayingStrategy) {
+        super( name, symbol, PlayerType.BOT);
         this.botDifficultyLevel = botDifficultyLevel;
         this.botPlayingStrategy = botPlayingStrategy;
 

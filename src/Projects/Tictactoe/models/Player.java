@@ -71,9 +71,12 @@ public class Player {
         //3.
         //homework
 
+        //update the board with the new move
+        board.getBoardofcells().get(row).get(col).setPlayer(this);
+
         //return a Move
         Cell cell=new Cell(row,col,this);// cells construtor with player - public Cell(int row, int col,Player player)
-        return new Move(cell,this);
+        return new Move(cell,this); //we are returning the move , we have to use this move in the other end
 
     }
 }

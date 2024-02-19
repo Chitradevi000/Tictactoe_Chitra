@@ -55,15 +55,20 @@ public class TicTacToeGame {
 
         while(game.getGamestate().equals(GameStatus.IN_PROGRESS)) //the game will run until its in progress
         {
-            System.out.println("Game Status");
+            System.out.println("Current Game Status");
             gameController.displayBoard(game);
 
-            //TODO of instructor: logic for UNDO
+           //TODO of instructor: logic for UNDO /
             gameController.executeMove(game);
+
+            //hence the while loop will give chance to all the players
+            //so iterate the number of players here
+            //TODO of instructor: logic for every player to make move
+
         }
 
         System.out.println("Game has ended, the result was: ");
-        if(gameController.getGameState().equals(GameStatus.DRAW))
+        if(gameController.getGameState(game).equals(GameStatus.DRAW))
         {
             System.out.println("Game is draw");
         }

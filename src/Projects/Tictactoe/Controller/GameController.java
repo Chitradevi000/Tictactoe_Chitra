@@ -4,10 +4,12 @@ package Projects.Tictactoe.Controller;
 import Projects.Tictactoe.Strategies.WinningStrategy.OrderOneWinningStrategy;
 import Projects.Tictactoe.models.Game;
 import Projects.Tictactoe.models.GameStatus;
+import Projects.Tictactoe.models.Move;
 import Projects.Tictactoe.models.Player;
 import Projects.Tictactoe.Strategies.WinningStrategy.WinningStrategy;
 
 import java.util.List;
+import java.util.Map;
 
 public class GameController {
 
@@ -48,8 +50,21 @@ public class GameController {
         //they said its for keep on rotating of players move
         int nextPlayerIndex= game.getNextPlayerIndex();
         Player nextPlayertoPlay=game.getPlayers().get(nextPlayerIndex);
-        nextPlayertoPlay.makeMove(game.getBoard());
+        Move move=nextPlayertoPlay.makeMove(game.getBoard()); //this make move from PLayer class will return the move, you have to use it
+        updateGameMoves(game,move);
     }
+
+    //I was running the program which is not updating the board with the symbol
+    //it has shown the empty board as current status
+    //we found that we didnt use the makemove return object from Player class
+    //we have created a function below for using it
+
+    private void updateGameMoves(Game game, Move move)
+    {
+        //we have to update game with latest move
+        game.getMoves().add(move); // the updated move is available in the executeMove function
+    }
+
 
     public String getWinner(Game game)
     {
